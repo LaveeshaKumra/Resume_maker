@@ -4,13 +4,22 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 export class Projects extends Component {
-    state = {
-        pname: '',
-        pdesc:'',
-        sdate: '',
-        edate: '',
-        sused: ''
-    }
+    
+    constructor(props){
+        super(props)
+        this.state = {
+            pname: '',
+            pdesc:'',
+            sdate: '',
+            edate: '',
+            sused: ''
+        }
+        this.Change1=this.Change1.bind(this)
+        this.Change2=this.Change2.bind(this)
+        this.Change3=this.Change3.bind(this)
+        this.Change4=this.Change4.bind(this)
+        this.Change5=this.Change5.bind(this)
+      }
     Change1 = e => {
         e.preventDefault();
         this.setState({
@@ -60,13 +69,13 @@ export class Projects extends Component {
                             <h2 >Projects</h2>
 
                             < TextField required id="standard-required"
-                                label="Company name"
+                                label="Project name"
                                 onChange={this.Change1}
                                 defaultValue={this.state.pname}
                             /><br />
 
                             < TextField required id="standard-required"
-                                label="Job Title"
+                                label="Project Description"
                                 onChange={this.Change2}
                                 defaultValue={this.state.pdesc}
                             /><br /><br/>
@@ -92,7 +101,7 @@ export class Projects extends Component {
 
 
                             < TextField required id="standard-required"
-                                label="Description"
+                                label="Skill used"
                                 onChange={this.Change5}
                                 defaultValue={this.state.sused}
                             /><br /><br />
@@ -114,7 +123,7 @@ export class Projects extends Component {
                                 <tbody>
 
                                     {values.projects.length != 0 ?
-                                        (values.experience.map((item, index) => (
+                                        (values.projects.map((item, index) => (
                                             <tr key={index}>
                                                 <td>{item.pname}</td>
                                                 <td>{item.pdesc}</td>

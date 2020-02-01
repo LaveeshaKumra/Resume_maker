@@ -7,10 +7,16 @@ import Table from 'react-bootstrap/Table'
 
 
 export class Skills extends Component {
-    state = {
-        val: '',
-        val2: ''
+    constructor(props){
+        super(props);
+        this.state = {
+            val: '',
+            val2: ''
+        }
+        this.Change=this.Change.bind(this);
+        this.Change2=this.Change2.bind(this);
     }
+    
     
     Change = e => {
         e.preventDefault();

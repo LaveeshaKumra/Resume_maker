@@ -11,10 +11,14 @@ export class Experience extends Component {
         edate: '',
         desc: ''
     }
-    // constructor(props){
-    //     super(props)
-    //     this.handleChange.bind(this)
-    //   }
+    constructor(props){
+        super(props)
+        this.Change1=this.Change1.bind(this)
+        this.Change2=this.Change2.bind(this)
+        this.Change3=this.Change3.bind(this)
+        this.Change4=this.Change4.bind(this)
+        this.Change5=this.Change5.bind(this)
+      }
 
     Change1 = e => {
         e.preventDefault();
@@ -56,8 +60,7 @@ export class Experience extends Component {
     }
     render() {
         const { values, handleChange } = this.props;
-        console.log(values.experience)
-        console.log(values.experience.length)
+        
         return (
             <div className="container-fluid back">
                 <div className="row">
@@ -123,6 +126,7 @@ export class Experience extends Component {
                                 <tbody>
 
                                     {values.experience.length !== 0 ?
+
                                         (values.experience.map((item, index) => (
                                             <tr key={index}>
                                                 <td>{item.cname}</td>
@@ -131,7 +135,9 @@ export class Experience extends Component {
                                                 <td>{item.edate}</td>
                                                 <td>{item.desc}</td>
                                             </tr>
-                                        ))) : 
+                                         ))) 
+
+                                         : 
                                         (
                                         <tr>
                                             <td></td>

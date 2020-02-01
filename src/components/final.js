@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
 export class Final extends Component {
-    
+    constructor(props){
+        super(props);
+    }
     render() {
-        const {values , handleChange }=this.props;
+        const {values }=this.props;
 
         return (
             <div>

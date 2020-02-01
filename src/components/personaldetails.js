@@ -5,10 +5,9 @@ import Button from '@material-ui/core/Button';
 
 
 export class Personaldetails extends Component {
-  // constructor(props){
-  //   super(props)
-  //   this.handleChange.bind(this)
-  // }
+  constructor(props){
+    super(props)
+  }
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
