@@ -131,7 +131,7 @@ export class Userform extends Component {
                 )
             case 7:
                 return (
-                    <Final nextStep={this.nextStep} prevStep={this.prevStep} handleChange={this.handleChange} values={this.state} />
+                    <Final prevStep={this.prevStep}  values={this.state} />
 
                 )
 
