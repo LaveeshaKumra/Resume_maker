@@ -58,20 +58,20 @@ export class Userform extends Component {
 
 
 
-    handleChange = (input, val) => e => {
+    handleChange = (input, val)=> e => {
 
         if ([input] == 'skill') {
             const list1 = this.state.skill.concat(val);
-            this.setState({ [input]: list1 }, () => console.log(this.state))
+            this.setState({ [input]: list1 })
 
         }
         else if (input == 'ntskill') {
             const list2 = this.state.ntskill.concat(val);
-            this.setState({ [input]: list2 }, () => console.log(this.state))
+            this.setState({ [input]: list2 })
         }
         else if (input === 'achievements') {
             const list = this.state.achievements.concat(val);
-            this.setState({ [input]: list }, () => console.log(this.state))
+            this.setState({ [input]: list })
         }
         else if ([input] == 'experience') {
             var joined = this.state.experience.concat([val]);
@@ -82,10 +82,10 @@ export class Userform extends Component {
         }
         else if ([input] == 'projects') {
             const list2 = this.state.projects.concat([val]);
-            this.setState({ [input]: list2 }, () => console.log(this.state))
+            this.setState({ [input]: list2 })
         }
         else
-            this.setState({ [input]: e.target.value }, () => console.log(this.state));
+            this.setState({ [input]: e.target.value });
 
 
     }
